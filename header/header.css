@@ -41,15 +41,15 @@ body {
   left: 0;
   z-index: 100;
   padding: 0.625em 3.125em;
-  /* background-color: var(--color-bg); */
-  background-color: transparent;
+  background-color: var(--color-bg);
+  /* background-color: transparent; */
   font-family: var(--font-header);
   box-shadow: 0 5px 25px 10px rgba(0, 0, 0, 0.5);
 }
 .header-container {
   display: grid;
-  grid-template-areas: "profile phone";
-  grid-template-columns: repeat(auto-fill, minmax(1fr, 1fr));
+  grid-template-areas: "profile title container-icon phone";
+  grid-template-columns: repeat(auto-fill, minmax(1fr, 1fr, 1fr, 1fr));
 }
 .profile {
   grid-area: profile;
@@ -90,6 +90,29 @@ body {
 .phone p {
   font-style: italic;
   letter-spacing: 0.05em;
+}
+.sub-encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.container-cart-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap:10px;
+}
+.title {
+  grid-area: title;
+  color: white;
+}
+.container-icon {
+  grid-area: container-icon;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*: Ancho mayores a 768px  (iPads, laptops y PCs) */
